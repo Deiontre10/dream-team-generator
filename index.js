@@ -31,6 +31,87 @@ function managerInfo () {
     ]).then(function(response) {
         const manager = new Manager(response.name, response.id, response.email, response.number);
         team.push(manager);
+        employeeOption();
     })
 };
+
+function employeeOption () {
+    inquirer.prompt([{
+        type: "list",
+        name: "name",
+        message: "What type of employee would you like to add?",
+        choices: ["Engineer", "Intern", "Finish"]
+    }      
+    ]).then(selection => {
+        if (selection.name === "Engineer") {
+            engineerInfo();
+        }
+        if (selection.name === "Intern") {
+            internInfo();
+        }
+        if (selection.name === "Finish") {
+            return;
+        }
+        
+    })
+};
+
+function engineerInfo () {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "Please enter a name for your engineer?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Please enter an id for your engineer?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Please enter a email for your engineer?"
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "Please enter the Github for your engineer?"
+        },
+    ]).then(function(response) {
+        const engineer = new Engineer(response.name, response.id, response.email, response.github);
+        team.push(engineer);
+        employeeOption();
+    })
+};
+
+function internInfo () {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "Please enter a name for your intern?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Please enter an id for your intern?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Please enter a email for your intern?"
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Please enter the school for your intern?"
+        },
+    ]).then(function(response) {
+        const intern = new Intern(response.name, response.id, response.email, response.school);
+        team.push(intern);
+        employeeOption();
+    })
+};
+
 managerInfo();
