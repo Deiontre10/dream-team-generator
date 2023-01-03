@@ -24,4 +24,28 @@ describe("Employee", () => {
         const employee = new Employee("ash", id);
         expect((employee.id)).toBe(id);
     });
+
+    it("Can get the id from getId", () => {
+        const testId = 10;
+        const employee = new Employee("ash", testId);
+        expect(employee.getId()).toBe(testId);
+    });
+
+    it("Can set the email from constructer", () => {
+        const email = "ask@ketchum.com";
+        const employee = new Employee("ash", 10, email);
+        expect((employee.email)).toBe(email);
+    });
+    
+    it("Can get the email from getEmail()", () => {
+        const testEmail = "ask@ketchum.com";
+        const employee = new Employee("ash", 10, testEmail);
+        expect(employee.getEmail()).toBe(testEmail);
+    });
+
+    it("Can get the role from getRole()", () => {
+        const testRole = "Employee";
+        const employee = new Employee("ash", 10, "ash@ketchum.com");
+        expect(employee.getRole()).toBe(testRole);
+    });
 });
