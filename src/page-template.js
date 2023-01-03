@@ -1,7 +1,14 @@
 
 
 const generateTeamMembers = (team) => {
-
+  `<article>
+      <h2>${team.name}</h2>
+      <ul>
+        <li>${team.id}</li>
+        <li>${team.email}</li>
+        <li>${team.officeNumber}</li>
+      </ul>
+    </article>`
 };
 
 // export function to generate entire page
