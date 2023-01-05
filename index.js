@@ -1,6 +1,7 @@
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateTeamMembers = require('./src/page-template')
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -51,7 +52,7 @@ function employeeOption () {
             internInfo();
         }
         if (selection.name === "Finish") {
-            return;
+            return makeFile();
         }
         
     })
@@ -115,6 +116,15 @@ function internInfo () {
     })
 };
 
-
+function makeFile () {
+    fs.writeFile('test.html', generateTeamMembers(team), (err) => {
+        if (err) {
+            console.log(err);
+            return
+        }else{
+            console.log("Your team page is created")
+        }
+    })
+};
 
 managerInfo();
