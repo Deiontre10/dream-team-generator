@@ -1,6 +1,7 @@
 
 const generateManagers = (team) => {
-  return `<article>
+  return `
+  <article>
     <h2>Name: ${team.name}</h2>
     <ul>
       <li>ID: ${team.id}</li>
@@ -12,7 +13,8 @@ const generateManagers = (team) => {
 };
 
 const generateEngineers = (team) => {
-  return `<article>
+  return `
+  <article>
     <h2>Name: ${team.name}</h2>
     <ul>
       <li>ID: ${team.id}</li>
@@ -23,7 +25,8 @@ const generateEngineers = (team) => {
 };
 
 const generateInterns = (team) => {
-  return `<article>
+  return `
+  <article>
     <h2>Name: ${team.name}</h2>
     <ul>
       <li>ID: ${team.id}</li>
