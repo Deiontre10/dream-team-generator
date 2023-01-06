@@ -91,11 +91,10 @@ const generateFullPage = (teamArticles) => {
     body {
       background: #C7CCDB;
     }
-    
+
     article {
       width: 100%;
-      background: #B84A62;
-      color: white;
+      background-color: white;
     }
 
     body>header {
