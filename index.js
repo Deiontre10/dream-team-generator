@@ -1,7 +1,7 @@
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateTeamMembers = require('./src/page-template')
+const generateTeam = require('./src/page-template')
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -117,7 +117,7 @@ function internInfo () {
 };
 
 function makeFile () {
-    fs.writeFile('test.html', generateTeamMembers(team), (err) => {
+    fs.writeFile('./dist/team.html', generateTeam(team), (err) => {
         if (err) {
             console.log(err);
             return
