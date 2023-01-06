@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dream Team</title>
+  <!-- Minified version -->
+  <style>
+    @import "https://cdn.simplecss.org/simple.min.css";
+
+    main {
+      display: grid;
+      grid-column: 1/-1;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      max-width: 1140px;
+      margin: auto;
+    }
+
+    article {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1140px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media screen and (max-width: 720px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Dream Team</h1>
   </header>
   <main>
+    
+  <article>
+    <h2>Name:a</h2>
+    <ul>
+      <li>ID:a</li>
+      <li>Email:a</li>
+      <li>Office Number:a</li>
+    </ul>
+  </article>
+  
+  <article>
+    <h2>Name:s</h2>
+    <ul>
+      <li>ID:s</li>
+      <li>Email:s</li>
+      <li>GitHub:s</li>
+    </ul>
+  </article>
+  <article>
+    <h2>Name:d</h2>
+    <ul>
+      <li>ID:d</li>
+      <li>Email:d</li>
+      <li>School:d</li>
+    </ul>
+  </article>
   </main>
   <footer>
     &copy; 2022-2023
