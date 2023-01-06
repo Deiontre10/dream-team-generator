@@ -2,11 +2,11 @@
 const generateManagers = (team) => {
   return `
   <article>
-    <h2>Name:${team.name}</h2>
+    <h2>Name: ${team.name}</h2>
     <ul>
-      <li>ID:${team.id}</li>
-      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
-      <li>Office Number:${team.officeNumber}</li>
+      <li>ID: ${team.id}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank"> ${team.email}</a></li>
+      <li>Office Number: ${team.officeNumber}</li>
     </ul>
   </article>
   `
@@ -15,11 +15,11 @@ const generateManagers = (team) => {
 const generateEngineers = (team) => {
   return `
   <article>
-    <h2>Name:${team.name}</h2>
+    <h2>Name: ${team.name}</h2>
     <ul>
-      <li>ID:${team.id}</li>
-      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
-      <li>GitHub:<a href="https://github.com/${team.github}" target="_blank">${team.github}</a></li>
+      <li>ID: ${team.id}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank"> ${team.email}</a></li>
+      <li>GitHub:<a href="https://github.com/${team.github}" target="_blank"> ${team.github}</a></li>
     </ul>
   </article>`
 };
@@ -27,11 +27,11 @@ const generateEngineers = (team) => {
 const generateInterns = (team) => {
   return `
   <article>
-    <h2>Name:${team.name}</h2>
+    <h2>Name: ${team.name}</h2>
     <ul>
-      <li>ID:${team.id}</li>
-      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
-      <li>School:${team.school}</li>
+      <li>ID: ${team.id}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank"> ${team.email}</a></li>
+      <li>School: ${team.school}</li>
     </ul>
   </article>`
 };
@@ -88,8 +88,19 @@ const generateFullPage = (teamArticles) => {
       margin: auto;
     }
 
+    body {
+      background: #C7CCDB;
+    }
+    
     article {
       width: 100%;
+      background: #B84A62;
+      color: white;
+    }
+
+    body>header {
+      background: #54457f;
+      color: white;
     }
 
     @media screen and (max-width: 1140px) {
