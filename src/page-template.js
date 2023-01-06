@@ -5,7 +5,7 @@ const generateManagers = (team) => {
     <h2>Name:${team.name}</h2>
     <ul>
       <li>ID:${team.id}</li>
-      <li>Email:${team.email}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
       <li>Office Number:${team.officeNumber}</li>
     </ul>
   </article>
@@ -18,8 +18,8 @@ const generateEngineers = (team) => {
     <h2>Name:${team.name}</h2>
     <ul>
       <li>ID:${team.id}</li>
-      <li>Email:${team.email}</li>
-      <li>GitHub:${team.github}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
+      <li>GitHub:<a href="https://github.com/${team.github}" target="_blank">${team.github}</a></li>
     </ul>
   </article>`
 };
@@ -30,7 +30,7 @@ const generateInterns = (team) => {
     <h2>Name:${team.name}</h2>
     <ul>
       <li>ID:${team.id}</li>
-      <li>Email:${team.email}</li>
+      <li>Email:<a href="mailto:${team.email}" target="_blank">${team.email}</a></li>
       <li>School:${team.school}</li>
     </ul>
   </article>`
